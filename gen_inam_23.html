@@ -1,0 +1,1322 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>खास इनाम — घुमाओ और जीतो 🎁</title>
+
+<!-- Mixpanel -->
+<script type="text/javascript">
+(function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:"mixpanel"===(c="mixpanel");a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");for(h=0;h<i.length;h++)g(a,i[h]);b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Baloo+2:wght@700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --chili:   #0E7A3A;
+  --chili2:  #085A28;
+  --saffron: #16A34A;
+  --turmeric:#D4920A;
+  --gold:    #B87A00;
+  --goldcoin:#F5C518;
+  --cream:   #F0FDF4;
+  --parchment:#E6F4EC;
+  --dark:    #052E14;
+  --brown:   #155724;
+  --green:   #0E7A3A;
+  --green2:  #085A28;
+  --reel:    #021A09;
+  --smoke:   rgba(14,122,58,0.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+
+html{
+  width:100%;
+  overflow-x:hidden;
+  -webkit-text-size-adjust:100%;
+}
+
+body{
+  font-family:'Noto Sans Devanagari',sans-serif;
+  background: #EBF5EE;
+  min-height:100dvh;
+  width:100%;
+  max-width:100vw;
+  display:flex;flex-direction:column;align-items:center;
+  overflow-x:hidden;
+  color:var(--dark);
+  position:relative;
+}
+
+/* ── SPICE DUST BACKGROUND ── */
+body::before{
+  content:'';
+  position:fixed;inset:0;
+  background:
+    radial-gradient(ellipse 60% 40% at 50% 0%,   rgba(14,122,58,0.08) 0%,transparent 70%),
+    radial-gradient(ellipse 40% 60% at 100% 50%,  rgba(212,160,10,0.07) 0%,transparent 70%),
+    radial-gradient(ellipse 50% 30% at 0%   80%,  rgba(22,163,74,0.06) 0%,transparent 70%),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,transparent 39px,
+      rgba(14,100,40,0.02) 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,transparent 39px,
+      rgba(14,100,40,0.02) 40px
+    );
+  pointer-events:none;
+  z-index:0;
+}
+
+/* ── HEADER ── */
+.hdr{
+  width:100%;
+  background:linear-gradient(160deg, #064E20 0%, #0E7A3A 45%, #085A28 100%);
+  padding:0 0 14px;
+  text-align:center;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+/* diagonal spice texture on header */
+.hdr::before{
+  content:'';
+  position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    45deg,
+    transparent 0,transparent 8px,
+    rgba(255,255,255,0.03) 8px,rgba(255,255,255,0.03) 9px
+  );
+  pointer-events:none;
+}
+.hdr-top-strip{
+  background:rgba(0,0,0,0.2);
+  padding:8px 16px 6px;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  margin-bottom:10px;
+}
+.hdr-logo-text{
+  font-family:'Baloo 2',cursive;
+  font-size:13px;font-weight:900;
+  color:rgba(255,230,150,0.9);letter-spacing:3px;text-transform:uppercase;
+}
+.hdr-chilis{font-size:16px;letter-spacing:4px}
+.hdr-title{
+  font-family:'Baloo 2',cursive;
+  font-size:34px;font-weight:900;
+  color:var(--goldcoin);
+  line-height:1;
+  text-shadow:0 2px 0 rgba(0,0,0,0.4),0 0 20px rgba(245,197,24,0.3);
+  padding:0 16px;
+}
+.hdr-sub{
+  font-size:13px;color:rgba(180,255,200,0.9);
+  margin-top:4px;
+}
+/* bottom zigzag border */
+.hdr-zigzag{
+  position:absolute;bottom:-10px;left:0;right:0;height:10px;
+  background:linear-gradient(135deg,#EBF5EE 25%,transparent 25%) -10px 0,
+    linear-gradient(225deg,#EBF5EE 25%,transparent 25%) -10px 0,
+    linear-gradient(315deg,#EBF5EE 25%,transparent 25%),
+    linear-gradient(45deg,#EBF5EE 25%,transparent 25%);
+  background-size:20px 10px;
+  background-color:#0E7A3A;
+}
+
+
+
+/* ── WRAPPER ── */
+.page-body{width:100%;max-width:420px;padding:0 12px;position:relative;z-index:1;overflow:hidden;}
+
+/* ── MACHINE OUTER ── */
+.machine-section{padding-top:16px;overflow:hidden;}
+
+/* ornamental top above machine */
+.ornament{
+  display:flex;align-items:center;gap:8px;margin-bottom:8px;
+}
+.ornament::before,.ornament::after{
+  content:'';flex:1;height:1.5px;
+  background:linear-gradient(90deg,transparent,var(--turmeric),transparent);
+}
+.orn-text{
+  font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  color:var(--turmeric);white-space:nowrap;
+}
+
+.machine-frame{
+  background:linear-gradient(180deg,#3A1800 0%,#220A00 100%);
+  border-radius:22px;
+  border:4px solid transparent;
+  background-clip:padding-box;
+  position:relative;
+  overflow:hidden;
+  box-shadow:
+    0 12px 40px rgba(0,0,0,0.6),
+    0 0 0 1px rgba(255,200,80,0.15),
+    inset 0 1px 0 rgba(255,200,80,0.1);
+}
+/* chrome metallic outer ring — inset:0 avoids Android WebView overflow */
+.machine-frame::before{
+  content:'';position:absolute;inset:0;
+  border-radius:22px;z-index:-1;
+  background:linear-gradient(145deg,
+    #F5C518 0%,#B87A00 25%,#7A5A00 40%,
+    #B87A00 55%,#F5C518 70%,#7A5A00 85%,#F5C518 100%);
+}
+
+/* top chrome bar */
+.m-topbar{
+  background:linear-gradient(180deg,#042A10 0%,#021A08 100%);
+  border-bottom:2px solid rgba(14,122,58,0.6);
+  padding:10px 14px 8px;
+  display:flex;flex-direction:column;align-items:center;gap:5px;
+  position:relative;
+}
+.m-topbar::after{
+  content:'';position:absolute;bottom:0;left:10%;right:10%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(245,197,24,0.4),transparent);
+}
+.mdots{display:flex;gap:6px}
+.md{
+  width:10px;height:10px;border-radius:50%;
+  animation:md-b 0.9s ease-in-out infinite;
+  box-shadow:0 0 4px currentColor;
+}
+.md:nth-child(5n+1){background:#FFD700;animation-delay:0s}
+.md:nth-child(5n+2){background:#FF4422;animation-delay:0.18s}
+.md:nth-child(5n+3){background:#22C55E;animation-delay:0.36s}
+.md:nth-child(5n+4){background:#FFD700;animation-delay:0.54s}
+.md:nth-child(5n+5){background:#FF4422;animation-delay:0.72s}
+@keyframes md-b{0%,100%{opacity:1;box-shadow:0 0 6px currentColor}50%{opacity:0.2;box-shadow:none}}
+
+.m-label{
+  font-family:'Baloo 2',cursive;
+  font-size:11px;font-weight:900;
+  color:var(--goldcoin);letter-spacing:3px;text-transform:uppercase;
+  text-shadow:0 0 10px rgba(245,197,24,0.6);
+}
+
+/* reels panel */
+.reels-panel{
+  background:linear-gradient(180deg,#010D04 0%,#011206 100%);
+  padding:8px;position:relative;
+}
+/* glass shine overlay on reels */
+.reels-panel::after{
+  content:'';
+  position:absolute;top:0;left:0;right:0;height:50%;
+  background:linear-gradient(180deg,rgba(100,200,140,0.04) 0%,transparent 100%);
+  pointer-events:none;z-index:6;
+}
+
+.payline{
+  position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);
+  height:88px;z-index:5;pointer-events:none;
+}
+.payline::before,.payline::after{
+  content:'';position:absolute;left:8px;right:8px;height:2px;
+}
+.payline::before{top:0;   background:linear-gradient(90deg,transparent,rgba(245,197,24,0.9),transparent)}
+.payline::after {bottom:0;background:linear-gradient(90deg,transparent,rgba(245,197,24,0.9),transparent)}
+.payline-mid{
+  position:absolute;left:8px;right:8px;top:0;bottom:0;
+  background:rgba(245,197,24,0.04);border-radius:4px;
+}
+/* left/right arrow indicators on payline */
+.payline-mid::before,.payline-mid::after{
+  content:'';position:absolute;top:50%;transform:translateY(-50%);
+  width:0;height:0;
+}
+.payline-mid::before{
+  left:-6px;
+  border-top:6px solid transparent;border-bottom:6px solid transparent;
+  border-left:8px solid rgba(245,197,24,0.8);
+}
+.payline-mid::after{
+  right:-6px;
+  border-top:6px solid transparent;border-bottom:6px solid transparent;
+  border-right:8px solid rgba(245,197,24,0.8);
+}
+
+.reels-row{display:flex;gap:5px}
+.reel{
+  flex:1;height:264px;overflow:hidden;border-radius:10px;
+  background:linear-gradient(180deg,#180A02,#1C0E04,#180A02);
+  position:relative;
+  box-shadow:
+    inset 3px 0 12px rgba(0,0,0,0.7),
+    inset -3px 0 12px rgba(0,0,0,0.7),
+    inset 0 0 20px rgba(0,0,0,0.4);
+  border:1px solid rgba(200,100,0,0.2);
+}
+.reel::before,.reel::after{
+  content:'';position:absolute;left:0;right:0;z-index:4;pointer-events:none;
+}
+.reel::before{top:0;   height:88px;background:linear-gradient(to bottom,#180A02 20%,rgba(24,10,2,0.6) 60%,transparent)}
+.reel::after {bottom:0;height:88px;background:linear-gradient(to top,   #180A02 20%,rgba(24,10,2,0.6) 60%,transparent)}
+
+.reel-inner{
+  position:absolute;left:0;right:0;top:0;
+  display:flex;flex-direction:column;will-change:transform;
+}
+.cell{
+  height:88px;flex-shrink:0;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:3px;
+  border-bottom:1px solid rgba(255,150,50,0.08);
+  background:linear-gradient(180deg,rgba(255,150,30,0.03) 0%,transparent 50%,rgba(0,0,0,0.1) 100%);
+}
+.cell .ci{font-size:32px;line-height:1}
+.cell .cl{
+  font-size:9px;font-weight:700;letter-spacing:0.3px;
+  color:#8A5500;text-align:center;
+  max-width:68px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.cell.hi  .cl{color:#16A34A}
+.cell.gold-cell .cl{color:#C8A800}
+
+/* bottom info bar */
+.m-botbar{
+  background:linear-gradient(180deg,#100600,#180A02);
+  border-top:1px solid rgba(200,130,10,0.25);
+  padding:10px 12px 12px;
+  display:flex;gap:8px;
+}
+.sbox{
+  flex:1;background:rgba(0,0,0,0.4);border:1px solid rgba(200,130,10,0.25);
+  border-radius:8px;padding:5px 8px;text-align:center;
+}
+.sbox-lbl{font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#6A3A00}
+.sbox-val{
+  font-family:'Baloo 2',cursive;font-size:18px;font-weight:900;
+  color:#00CC77;text-shadow:0 0 8px rgba(0,200,120,0.4);
+  letter-spacing:1px;line-height:1.2;
+}
+
+/* ── SPIN BUTTON ── */
+.spin-outer{padding:14px 0 0}
+.spin-btn{
+  width:100%;height:74px;
+  background:linear-gradient(180deg,#16A34A 0%,#0E7A3A 50%,#085A28 100%);
+  border:none;border-radius:16px;cursor:pointer;
+  font-family:'Baloo 2',cursive;font-size:28px;font-weight:900;
+  color:var(--goldcoin);letter-spacing:1px;
+  box-shadow:0 7px 0 #043A14,0 10px 28px rgba(14,80,40,0.4),inset 0 1px 0 rgba(255,255,255,0.2);
+  text-shadow:0 1px 4px rgba(0,0,0,0.4);
+  position:relative;overflow:hidden;
+  transition:transform 0.08s,box-shadow 0.08s;
+  animation:spin-pulse 2s ease-in-out infinite;
+}
+@keyframes spin-pulse{
+  0%,100%{box-shadow:0 7px 0 #5A0A00,0 10px 28px rgba(180,30,0,0.4),0 0 0 0 rgba(22,163,74,0)}
+  50%    {box-shadow:0 7px 0 #5A0A00,0 10px 28px rgba(180,30,0,0.5),0 0 0 10px rgba(22,163,74,0)}
+}
+.spin-btn:active:not(:disabled){
+  transform:translateY(6px);
+  box-shadow:0 1px 0 #043A14,0 4px 10px rgba(14,80,40,0.25);
+  animation:none;
+}
+.spin-btn:disabled{background:#888;box-shadow:0 4px 0 #555;color:#BBB;cursor:not-allowed;animation:none}
+.spin-btn .shine{
+  position:absolute;top:0;left:-70%;width:45%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.22),transparent);
+  transform:skewX(-15deg);transition:left 0.5s ease;
+}
+.spin-btn:not(:disabled):hover .shine{left:130%}
+.tap-hint{
+  text-align:center;margin-top:16px;margin-bottom:4px;
+  font-size:12px;font-weight:600;color:var(--brown);
+  display:flex;align-items:center;justify-content:center;gap:5px;
+  opacity:0.75;
+  letter-spacing:0.3px;
+}
+@keyframes hint-fade{0%,100%{opacity:0.5}50%{opacity:1}}
+
+/* ── OFFERS ── */
+.offers-section{padding:16px 0 4px}
+
+.offers-title-row{
+  display:flex;align-items:center;gap:8px;margin-bottom:10px;
+}
+.offers-title-row::before,.offers-title-row::after{
+  content:'';flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(14,122,58,0.4),transparent);
+}
+.offers-title{
+  font-size:10px;font-weight:800;letter-spacing:2.5px;
+  text-transform:uppercase;color:var(--brown);white-space:nowrap;
+}
+
+/* 2-col grid for first 4, last one full width */
+.offers-grid{display:flex;flex-direction:column;gap:6px}
+.offers-row{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+
+.chip{
+  background:#fff;
+  border:1.5px solid rgba(14,122,58,0.3);
+  border-radius:12px;
+  padding:9px 10px;
+  display:flex;align-items:center;gap:8px;
+  position:relative;
+  transition:border-color 0.3s,background 0.3s,transform 0.2s;
+  overflow:hidden;
+}
+.chip::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,rgba(14,122,58,0.15),transparent);
+}
+/* gold coin chip special */
+.chip.jackpot{
+  background:linear-gradient(135deg,#FEFCE8,#FEF3C7);
+  border-color:rgba(180,120,0,0.5);
+  box-shadow:0 2px 8px rgba(180,120,0,0.12);
+}
+.chip.jackpot::before{
+  background:linear-gradient(90deg,transparent,rgba(245,197,24,0.4),transparent);
+}
+.chip.won{
+  border-color:var(--chili)!important;background:#FFF2EC!important;
+  animation:chip-pop 0.4s ease;
+  box-shadow:0 0 0 3px rgba(200,32,10,0.12)!important;
+}
+@keyframes chip-pop{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+
+.chip-ico{font-size:24px;line-height:1;flex-shrink:0}
+.chip-img{
+  width:38px;height:38px;flex-shrink:0;
+  object-fit:contain;border-radius:6px;
+}
+.chip-info{min-width:0;flex:1}
+.chip-name{font-size:11px;font-weight:600;color:#052E14;line-height:1.2}
+.chip-val{
+  font-family:'Baloo 2',cursive;font-size:15px;font-weight:900;
+  color:var(--chili);margin-top:1px;
+}
+.chip.jackpot .chip-val{color:#92400E}
+.chip-tick{font-size:18px;flex-shrink:0;opacity:0;transition:opacity 0.3s}
+.chip.won .chip-tick{opacity:1}
+
+/* jackpot badge */
+.jp-badge{
+  display:inline-flex;align-items:center;gap:3px;
+  font-size:8px;font-weight:800;letter-spacing:0.8px;
+  background:linear-gradient(90deg,rgba(212,160,10,0.15),rgba(180,120,0,0.12));
+  color:#92400E;border:1px solid rgba(180,120,0,0.35);
+  border-radius:4px;padding:2px 5px;margin-top:2px;
+  text-transform:uppercase;
+}
+
+/* gold coin image on reel */
+.reel-gcoin-img{
+  width:34px;height:34px;object-fit:contain;
+  filter:drop-shadow(0 1px 4px rgba(180,130,0,0.6));
+}
+/* product images on reel */
+.reel-prod-img{
+  width:54px;height:54px;object-fit:contain;
+  border-radius:6px;
+  filter:drop-shadow(0 1px 6px rgba(0,0,0,0.5));
+}
+.gcoin-img{
+  width:42px;height:42px;flex-shrink:0;
+  object-fit:contain;
+  filter:drop-shadow(0 2px 6px rgba(180,130,0,0.5));
+}
+
+/* full-width gold coin chip */
+.chip-wide{
+  grid-column:1/-1;
+  padding:10px 14px;
+}
+.chip-wide .chip-ico{font-size:28px}
+.chip-wide .chip-val{font-size:17px}
+
+/* ── WIN MODAL ── */
+.modal-bg{
+  position:fixed;inset:0;
+  background:rgba(255,240,200,0.7);
+  backdrop-filter:blur(6px);
+  z-index:500;
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;
+  opacity:0;pointer-events:none;
+  transition:opacity 0.35s;
+  overflow:hidden;
+  width:100vw;
+  max-width:100vw;
+}
+.modal-bg.open{opacity:1;pointer-events:all}
+.modal-box{
+  background:linear-gradient(160deg,#F0FDF4,#DCFCE7,#BBF7D0);
+  border:2.5px solid #16A34A;
+  border-radius:24px;
+  padding:26px 20px 22px;
+  width:100%;max-width:380px;
+  text-align:center;
+  box-shadow:0 0 50px rgba(14,122,58,0.25),0 20px 48px rgba(5,46,20,0.2);
+  transform:scale(0.75) translateY(30px);
+  transition:transform 0.45s cubic-bezier(0.34,1.56,0.64,1);
+}
+.modal-bg.open .modal-box{transform:scale(1) translateY(0)}
+
+.m-ico{
+  font-size:68px;line-height:1;margin-bottom:8px;display:block;
+  animation:mico-pop 0.5s 0.2s both cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes mico-pop{from{transform:scale(0) rotate(-15deg);opacity:0}to{transform:scale(1) rotate(0);opacity:1}}
+.m-head{
+  font-family:'Baloo 2',cursive;font-size:28px;font-weight:900;
+  color:var(--chili);line-height:1.1;
+}
+.m-from{font-size:13px;color:#155724;margin-top:3px;font-weight:600}
+.m-val{
+  font-family:'Baloo 2',cursive;font-size:42px;font-weight:900;
+  color:var(--green);margin:4px 0;
+  animation:val-glow 2s ease-in-out infinite alternate;
+}
+@keyframes val-glow{
+  from{text-shadow:0 0 10px rgba(20,120,50,0.2)}
+  to  {text-shadow:0 0 30px rgba(20,160,60,0.7),0 0 60px rgba(10,120,40,0.25)}
+}
+.m-name{font-size:15px;font-weight:700;color:var(--dark);margin-bottom:6px}
+
+.m-ttl-bar{
+  display:flex;align-items:center;gap:6px;
+  background:rgba(14,122,58,0.06);border:1px solid rgba(14,122,58,0.15);
+  border-radius:8px;padding:7px 10px;margin:8px 0 6px;
+  font-size:12px;font-weight:700;color:#6A1800;
+}
+.m-ttl-ico{font-size:16px}
+
+/* countdown */
+.countdown{display:flex;justify-content:center;gap:7px;margin:6px 0 14px}
+.cdb{
+  background:#fff;border:1.5px solid #16A34A;
+  border-radius:10px;padding:5px 9px;min-width:50px;text-align:center;
+  box-shadow:0 2px 6px rgba(170,110,0,0.1);
+}
+.cdb-n{
+  font-family:'Baloo 2',cursive;font-size:22px;font-weight:900;
+  color:#155724;line-height:1;
+}
+.cdb-l{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#1A5A2A;margin-top:1px}
+
+/* CTAs */
+.m-btns{display:flex;flex-direction:column;gap:8px}
+.btn-order{
+  width:100%;height:58px;border:none;border-radius:14px;cursor:pointer;
+  background:linear-gradient(135deg,#F5C518,#D4920A);
+  font-family:'Baloo 2',cursive;font-size:20px;font-weight:900;
+  color:var(--dark);
+  box-shadow:0 5px 0 #7A5000,0 8px 20px rgba(120,80,0,0.3);
+  transition:transform 0.08s;
+}
+.btn-order:active{transform:translateY(4px);box-shadow:0 1px 0 #7A5000}
+.btn-cash{
+  width:100%;height:46px;border:1.5px solid #16A34A;border-radius:12px;cursor:pointer;
+  background:transparent;font-family:'Baloo 2',cursive;font-size:16px;font-weight:700;
+  color:#155724;transition:background 0.15s;
+}
+.btn-cash:active{background:rgba(14,122,58,0.08)}
+.m-brand{font-size:11px;color:rgba(5,46,20,0.5);margin-top:12px}
+
+/* ── ALREADY PLAYED ── */
+.played-wrap{width:100%;max-width:420px;padding:14px 12px;display:none;z-index:1;position:relative}
+.played-inner{
+  background:linear-gradient(160deg,#F0FDF4,#DCFCE7);
+  border:2px solid #16A34A;border-radius:20px;
+  padding:22px 18px;text-align:center;
+  box-shadow:0 8px 28px rgba(14,122,58,0.12);
+}
+.played-title{font-family:'Baloo 2',cursive;font-size:22px;font-weight:900;color:#0E7A3A}
+.played-prize{font-family:'Baloo 2',cursive;font-size:32px;font-weight:900;color:var(--green);margin:5px 0}
+.played-exp{font-size:12px;font-weight:600;color:var(--brown);margin-bottom:8px}
+
+/* ── CONFETTI ── */
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:999;overflow:hidden}
+.cp{position:absolute;top:-14px;border-radius:2px;animation:cpf linear forwards}
+@keyframes cpf{
+  0%  {transform:translateY(0) rotate(0deg);opacity:1}
+  80% {opacity:1}
+  100%{transform:translateY(106vh) rotate(560deg);opacity:0}
+}
+
+/* usage examples box */
+.m-examples{
+  width:100%;background:rgba(255,255,255,0.7);
+  border:1.5px solid rgba(14,122,58,0.3);
+  border-radius:10px;padding:10px 14px;
+  margin:8px 0 6px;text-align:left;
+}
+.m-examples-title{
+  font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;
+  color:#155724;margin-bottom:6px;
+}
+.m-examples ul{list-style:none;padding:0;margin:0}
+.m-examples li{
+  font-size:13px;color:rgba(44,26,0,0.85);
+  line-height:1.6;padding-left:14px;position:relative;
+}
+.m-examples li::before{content:'•';position:absolute;left:0;color:var(--saffron);font-weight:900}
+
+/* scrolling ticker */
+.m-ticker-wrap{
+  width:100%;overflow:hidden;
+  background:linear-gradient(135deg,#0E7A3A,#16A34A);
+  border-radius:8px;padding:7px 0;margin:8px 0;
+  contain:layout style paint;
+  transform:translateZ(0);
+  max-width:100%;
+}
+.m-ticker{
+  display:inline-block;white-space:nowrap;
+  animation:ticker-scroll 20s linear infinite;
+  font-size:11px;font-weight:800;color:#fff;
+  text-shadow:0 1px 2px rgba(0,0,0,0.2);letter-spacing:0.3px;
+}
+@keyframes ticker-scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.footer{
+  width:100%;padding:16px 0 28px;text-align:center;
+  font-size:11px;color:rgba(60,30,0,0.45);z-index:1;position:relative;
+}
+</style>
+</head>
+<body>
+
+<div class="confetti" id="confetti"></div>
+
+<!-- WIN MODAL -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal-box">
+    <span class="m-ico" id="mIco"></span>
+    <div class="m-head">🎉 बधाई हो!</div>
+    <div class="m-from">आपने जीता</div>
+    <div class="m-val"  id="mVal"></div>
+    <div class="m-name" id="mName"></div>
+    <div class="m-examples" id="mExamples" style="display:none">
+      <div class="m-examples-title">📊 कैसे इस्तेमाल होगा? (उदाहरण)</div>
+      <ul id="mExamplesList"></ul>
+    </div>
+    <div class="m-ticker-wrap" id="mTickerWrap" style="display:none">
+      <span class="m-ticker" id="mTicker"></span>
+    </div>
+    <div class="m-ttl-bar">
+      <span class="m-ttl-ico">⏰</span>
+      <span>यह इनाम 3 दिन में खत्म होगा — जल्दी इस्तेमाल करें!</span>
+    </div>
+    <div class="countdown">
+      <div class="cdb"><div class="cdb-n" id="mCdD">--</div><div class="cdb-l">दिन</div></div>
+      <div class="cdb"><div class="cdb-n" id="mCdH">--</div><div class="cdb-l">घंटे</div></div>
+      <div class="cdb"><div class="cdb-n" id="mCdM">--</div><div class="cdb-l">मिनट</div></div>
+      <div class="cdb"><div class="cdb-n" id="mCdS">--</div><div class="cdb-l">सेकंड</div></div>
+    </div>
+    <div class="m-btns">
+      <button class="btn-order" id="btnOrder">🛒 अभी ऑर्डर करें</button>
+      <button class="btn-cash"  id="btnCash">💰 कैश वॉलेट देखें</button>
+    </div>
+    <div class="m-brand">इनाम जल्दी claim करें — 3 दिन में खत्म होगा</div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="hdr-top-strip">
+    <span class="hdr-chilis">🎁✨🎁</span>
+    <span class="hdr-logo-text">खास इनाम</span>
+    <span class="hdr-chilis">🎁✨🎁</span>
+  </div>
+  <div class="hdr-title">🎰 घुमाओ और जीतो!</div>
+  <div class="hdr-sub">हर ऑर्डर पर एक पक्का इनाम — अभी घुमाएं</div>
+  <div class="hdr-zigzag"></div>
+</div>
+
+
+
+<!-- MAIN BODY (machine + offers) -->
+<div class="page-body" id="machineSection">
+
+  <!-- MACHINE -->
+  <div class="machine-section">
+    <div class="ornament">
+      <span class="orn-text">🎁 इनाम मशीन 🎁</span>
+    </div>
+
+    <div class="machine-frame">
+      <div class="m-topbar">
+        <div class="mdots">
+          <div class="md"></div><div class="md"></div><div class="md"></div>
+          <div class="md"></div><div class="md"></div><div class="md"></div>
+          <div class="md"></div><div class="md"></div><div class="md"></div>
+          <div class="md"></div>
+        </div>
+        <div class="m-label">★ इनाम मशीन ★</div>
+      </div>
+
+      <div class="reels-panel">
+        <div class="payline">
+          <div class="payline-mid"></div>
+        </div>
+        <div class="reels-row">
+          <div class="reel"><div class="reel-inner" id="r0"></div></div>
+          <div class="reel"><div class="reel-inner" id="r1"></div></div>
+          <div class="reel"><div class="reel-inner" id="r2"></div></div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- SPIN BUTTON -->
+  <div class="spin-outer">
+    <button class="spin-btn" id="spinBtn">
+      <div class="shine"></div>👆 &nbsp;यहाँ दबाएं और घुमाएं!
+    </button>
+
+  </div>
+  <div class="tap-hint" id="tapHint">👇 &nbsp;बटन दबाएं — इनाम पाएं</div>
+
+  <!-- OFFERS -->
+  <div class="offers-section">
+    <div class="offers-title-row">
+      <span class="offers-title">जीत सकते हैं ये इनाम</span>
+    </div>
+
+    <div class="offers-grid">
+      <div class="offers-row">
+        <div class="chip" id="pz-0">
+          <img class="chip-img" src="https://images.kiranaclub.ai/widget3/March/27/970e233f-e02e-46d0-97cd-efe0d14cde5b/1774600642011.webp?width=200&height=200&aspect_ratio=1.0000" alt="मसाले">
+          <div class="chip-info">
+            <div class="chip-name">मसाले</div>
+            <div class="chip-val">₹500 तक off</div>
+          </div>
+          <span class="chip-tick">✅</span>
+        </div>
+        <div class="chip" id="pz-1">
+          <img class="chip-img" src="https://images.kiranaclub.ai/widget3/March/27/6049c247-b4ca-4ad5-b925-216bc20ed54f/1774602118849.webp?width=200&height=200&aspect_ratio=1.0000" alt="चाय">
+          <div class="chip-info">
+            <div class="chip-name">चाय</div>
+            <div class="chip-val">₹700 तक off</div>
+          </div>
+          <span class="chip-tick">✅</span>
+        </div>
+      </div>
+      <div class="offers-row">
+        <div class="chip" id="pz-2">
+          <img class="chip-img" src="https://images.kiranaclub.ai/widget3/March/20/3f5de6b5-6542-4f05-8ed6-76fd3779a5f7/1774004101005.png?width=200&height=200&aspect_ratio=1.0000" alt="Zoff">
+          <div class="chip-info">
+            <div class="chip-name">Zoff मसाले</div>
+            <div class="chip-val">₹500 कैश</div>
+          </div>
+          <span class="chip-tick">✅</span>
+        </div>
+        <div class="chip" id="pz-3">
+          <img class="chip-img" src="https://images.kiranaclub.ai/widget3/March/20/187dd3b7-6474-4776-bc6f-40995f1d422f/1774018859601.png?width=200&height=200&aspect_ratio=1.0000" alt="Derby">
+          <div class="chip-info">
+            <div class="chip-name">Derby</div>
+            <div class="chip-val">₹500 कैश</div>
+          </div>
+          <span class="chip-tick">✅</span>
+        </div>
+      </div>
+      <div class="offers-row">
+        <div class="chip jackpot" id="pz-4">
+          <img src="https://images.kiranaclub.ai/widget3/March/20/c90cb713-e508-4246-ab11-e285a6a48592/1774007074922.webp?width=200&height=200&aspect_ratio=1.0000" class="chip-img" alt="सोने का सिक्का">
+          <div class="chip-info">
+            <div class="chip-name">सोने का सिक्का</div>
+            <div class="chip-val" style="color:#92400E;font-size:11px">1g Gold Coin</div>
+            <div class="jp-badge">⚡ जैकपॉट</div>
+          </div>
+          <span class="chip-tick">✅</span>
+        </div>
+        <div class="chip jackpot" id="pz-5">
+          <img src="https://images.kiranaclub.ai/widget3/March/27/ca6164a7-6149-4fe8-8cd0-a1d4a8b60399/1774600534259.webp?width=200&height=200&aspect_ratio=1.0000" class="chip-img" alt="AC">
+          <div class="chip-info">
+            <div class="chip-name">एयर कंडीशनर</div>
+            <div class="chip-val" style="color:#92400E;font-size:11px">AC</div>
+            <div class="jp-badge">⚡ मेगा जैकपॉट</div>
+          </div>
+          <span class="chip-tick">✅</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /page-body -->
+
+<!-- ALREADY PLAYED -->
+<div class="played-wrap" id="playedCard">
+  <div class="played-inner">
+    <div class="played-title">आप खेल चुके हैं! 🎉</div>
+    <div class="played-prize" id="playedPrize"></div>
+    <div class="played-exp">⏰ इनाम की समय-सीमा:</div>
+    <div class="countdown">
+      <div class="cdb"><div class="cdb-n" id="pCdD">--</div><div class="cdb-l">दिन</div></div>
+      <div class="cdb"><div class="cdb-n" id="pCdH">--</div><div class="cdb-l">घंटे</div></div>
+      <div class="cdb"><div class="cdb-n" id="pCdM">--</div><div class="cdb-l">मिनट</div></div>
+      <div class="cdb"><div class="cdb-n" id="pCdS">--</div><div class="cdb-l">सेकंड</div></div>
+    </div>
+    <div class="m-btns">
+      <button class="btn-order" id="btnOrderR">🛒 अभी ऑर्डर करें</button>
+      <button class="btn-cash"  id="btnCashR">💰 कैश वॉलेट देखें</button>
+    </div>
+  </div>
+</div>
+
+<div class="footer">🎁 हर ऑर्डर पर एक पक्का इनाम 🎁</div>
+
+<script>
+// ── CONFIG ──
+const MIXPANEL_TOKEN = '36e90f794ab91b0700637434bc8c1ace';
+const WEBENGAGE_API  = 'https://dobby.retailpulse.ai/api/webengage/events';
+const CASHBACK_API   = 'https://grimwald.retailpulse.ai/api/loyalty/add_cashback';
+const COUPON_API     = 'https://ondc.retailpulse.ai/coupons/user/add';
+const OFFER_TTL_MS   = 3 * 24 * 60 * 60 * 1000;
+const PAGE_LOAD_TIME = Date.now();
+
+// ── USER ID — same extraction as suruchi webview ──
+const params  = new URLSearchParams(window.location.search);
+const userId  = window.sessionStorage.getItem('data') || null;
+const city    = params.get('city') || null;
+const PLAYED_KEY = `gen_spin_played_${window.location.pathname}_${userId||'anon'}`;
+
+// ── EVENT NAME REGISTRY ──
+// gen_slot_ prefix — no overlap with masale_slot_, choc_slot_, suruchi_spin_WV_
+const EV = {
+  SCREEN_VIEW:           'gen_slot_page_view',
+  SCREEN_ALREADY_PLAYED: 'gen_slot_seen_before',
+  SPIN_CLICKED:          'gen_slot_spin_tap',
+  WIN_MASALE:            'gen_slot_won_masale',
+  WIN_TEA:               'gen_slot_won_tea',
+  WIN_ZOFF:              'gen_slot_won_zoff',
+  WIN_DERBY:             'gen_slot_won_derby',
+  CASH_OK_MASALE:        'gen_slot_cash_masale_ok',
+  CASH_OK_TEA:           'gen_slot_cash_tea_ok',
+  CASH_OK_ZOFF:          'gen_slot_cash_zoff_ok',
+  CASH_OK_DERBY:         'gen_slot_cash_derby_ok',
+  CASH_FAIL_MASALE:      'gen_slot_cash_masale_fail',
+  CASH_FAIL_TEA:         'gen_slot_cash_tea_fail',
+  CASH_FAIL_ZOFF:        'gen_slot_cash_zoff_fail',
+  CASH_FAIL_DERBY:       'gen_slot_cash_derby_fail',
+  CASH_SKIPPED:          'gen_slot_cash_not_set',
+  ORDER_CTA_MASALE:      'gen_slot_order_masale',
+  ORDER_CTA_TEA:         'gen_slot_order_tea',
+  ORDER_CTA_ZOFF:        'gen_slot_order_zoff',
+  ORDER_CTA_DERBY:       'gen_slot_order_derby',
+  CASH_WALLET_CTA:       'gen_slot_wallet_tap',
+  ORDER_CTA_REPEAT:      'gen_slot_repeat_order',
+  CASH_CTA_REPEAT:       'gen_slot_repeat_wallet',
+};
+
+// Helper: map brand evtKey → relevant event name
+function brandEvent(evtKey, action){
+  // action = 'win' | 'cash_ok' | 'cash_fail' | 'order_cta'
+  const map = {
+    masale:{ win:EV.WIN_MASALE, cash_ok:EV.CASH_OK_MASALE, cash_fail:EV.CASH_FAIL_MASALE, order_cta:EV.ORDER_CTA_MASALE },
+    tea:   { win:EV.WIN_TEA,    cash_ok:EV.CASH_OK_TEA,    cash_fail:EV.CASH_FAIL_TEA,    order_cta:EV.ORDER_CTA_TEA    },
+    zoff:  { win:EV.WIN_ZOFF,   cash_ok:EV.CASH_OK_ZOFF,   cash_fail:EV.CASH_FAIL_ZOFF,   order_cta:EV.ORDER_CTA_ZOFF   },
+    derby: { win:EV.WIN_DERBY,  cash_ok:EV.CASH_OK_DERBY,  cash_fail:EV.CASH_FAIL_DERBY,  order_cta:EV.ORDER_CTA_DERBY  },
+  };
+  return (map[evtKey]||{})[action] || null;
+}
+
+// prob:0 = never wins (decoy only)
+// ⚠️ PLACEHOLDERS — fill before go-live
+const PRIZES = [
+  {
+    id:0, ico:'🌶️',
+    img:'https://images.kiranaclub.ai/widget3/March/27/970e233f-e02e-46d0-97cd-efe0d14cde5b/1774600642011.webp?width=200&height=200&aspect_ratio=1.0000',
+    name:'मसाले', val:'मसाले ₹500 तक off', cashAmt:0, prob:36,
+    offerType:'coupon', couponId:null,
+    sourceId:null, cashbackTypeId:null,
+    seller:null, navSource:null, evtKey:'masale',
+  },
+  {
+    id:1, ico:'🍵',
+    img:'https://images.kiranaclub.ai/widget3/March/27/6049c247-b4ca-4ad5-b925-216bc20ed54f/1774602118849.webp?width=200&height=200&aspect_ratio=1.0000',
+    name:'चाय', val:'चाय ₹700 तक off', cashAmt:0, prob:30,
+    offerType:'coupon', couponId:null,
+    sourceId:null, cashbackTypeId:null,
+    seller:null, navSource:null, evtKey:'tea',
+  },
+  {
+    id:2, ico:'🧂',
+    img:'https://images.kiranaclub.ai/widget3/March/20/3f5de6b5-6542-4f05-8ed6-76fd3779a5f7/1774004101005.png?width=200&height=200&aspect_ratio=1.0000',
+    name:'Zoff मसाले', val:'Zoff ₹500 कैश', cashAmt:500, prob:20,
+    offerType:'cashback', couponId:null,
+    sourceId:987, cashbackTypeId:2,
+    seller:'zoff_foods', navSource:'third_party_zoff_foods', evtKey:'zoff',
+  },
+  {
+    id:3, ico:'🍫',
+    img:'https://images.kiranaclub.ai/widget3/March/20/187dd3b7-6474-4776-bc6f-40995f1d422f/1774018859601.png?width=200&height=200&aspect_ratio=1.0000',
+    name:'Derby', val:'Derby ₹500 कैश', cashAmt:500, prob:14,
+    offerType:'cashback', couponId:null,
+    sourceId:988, cashbackTypeId:13,
+    seller:'derby', navSource:'third_party_derby', evtKey:'derby',
+  },
+  {
+    id:4, ico:'🪙',
+    img:'https://images.kiranaclub.ai/widget3/March/20/c90cb713-e508-4246-ab11-e285a6a48592/1774007074922.webp?width=200&height=200&aspect_ratio=1.0000',
+    name:'सोने का सिक्का', val:'1g Gold Coin', cashAmt:0, prob:0,
+    offerType:null, couponId:null,
+    sourceId:null, cashbackTypeId:null,
+    seller:null, navSource:null, evtKey:'gold_coin',
+  },
+  {
+    id:5, ico:'❄️',
+    img:'https://images.kiranaclub.ai/widget3/March/27/ca6164a7-6149-4fe8-8cd0-a1d4a8b60399/1774600534259.webp?width=200&height=200&aspect_ratio=1.0000',
+    name:'AC', val:'AC ⚡जैकपॉट', cashAmt:0, prob:0,
+    offerType:null, couponId:null,
+    sourceId:null, cashbackTypeId:null,
+    seller:null, navSource:null, evtKey:'ac',
+  },
+];
+
+// Strip: AC(top), Masale(payline), Gold(bottom) as default view
+// Masale(0) & Tea(1) appear most — highest prob prizes
+const REEL_STRIP = [
+  PRIZES[5], PRIZES[0], PRIZES[4], PRIZES[1], PRIZES[5], PRIZES[2],
+  PRIZES[0], PRIZES[4], PRIZES[1], PRIZES[3], PRIZES[0], PRIZES[5],
+  PRIZES[2], PRIZES[1], PRIZES[0], PRIZES[4], PRIZES[3], PRIZES[5],
+  PRIZES[0], PRIZES[1], PRIZES[5], PRIZES[2], PRIZES[0], PRIZES[1],
+];
+
+const CELL_H = 88;
+let spinning = false;
+let cdIntervals = {};
+
+// ── TRACKING ──
+try{mixpanel.init(MIXPANEL_TOKEN,{debug:false,track_pageview:false,persistence:'localStorage'});if(userId)mixpanel.identify(userId);}catch(e){}
+
+function logEvent(evName, props){
+  if(evName.length>50) console.warn('Event name exceeds 50 chars:',evName,evName.length);
+  // Issue 5 fix: only fire tracking if userId is known — consistent with suruchi webview
+  if(!userId) return;
+  const d=Object.assign({
+    user_id:  userId,
+    city:     city,
+    campaign: 'gen_spin_wheel',
+    ts:       new Date().toISOString(),
+  }, props||{});
+  try{ mixpanel.track(evName, d); }catch(e){}
+  try{
+    fetch(WEBENGAGE_API,{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ userIds:[userId], eventName:evName, eventObject:d })
+    });
+  }catch(e){}
+}
+
+// ── STATE ──
+function getPlayed(){try{const r=localStorage.getItem(PLAYED_KEY);return r?JSON.parse(r):null;}catch(e){return null;}}
+
+function savePlayed(p,atMs){
+  try{
+    localStorage.setItem(PLAYED_KEY,JSON.stringify({
+      // Issue 3 fix: store both prize_id AND evtKey so lookup is robust
+      prize_id:   p.id,
+      prize_evtKey: p.evtKey,
+      prize_name: p.name,
+      prize_val:  p.val,
+      played_at:  new Date(atMs).toISOString(),
+      expires_at: new Date(atMs+OFFER_TTL_MS).toISOString(),
+    }));
+  }catch(e){}
+}
+
+function getExpiry(s){
+  if(!s)return Date.now()+OFFER_TTL_MS;
+  if(s.expires_at){const t=new Date(s.expires_at).getTime();if(!isNaN(t))return t;}
+  if(s.played_at) {const t=new Date(s.played_at).getTime(); if(!isNaN(t))return t+OFFER_TTL_MS;}
+  return Date.now()+OFFER_TTL_MS;
+}
+
+// ── COUNTDOWN ──
+function startCd(pfx,expMs){
+  if(cdIntervals[pfx])clearInterval(cdIntervals[pfx]);
+  const tick=()=>{
+    const diff=expMs-Date.now();
+    if(diff<=0){clearInterval(cdIntervals[pfx]);try{localStorage.removeItem(PLAYED_KEY);}catch(e){}location.reload();return;}
+    const d=Math.floor(diff/86400000),h=Math.floor((diff%86400000)/3600000),
+          m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);
+    document.getElementById(pfx+'D').textContent=d;
+    document.getElementById(pfx+'H').textContent=h<10?'0'+h:h;
+    document.getElementById(pfx+'M').textContent=m<10?'0'+m:m;
+    document.getElementById(pfx+'S').textContent=s<10?'0'+s:s;
+  };
+  tick();cdIntervals[pfx]=setInterval(tick,1000);
+}
+
+// ── BRIDGE ──
+let _lastWinner = null; // set in onDone so CTAs know which brand to nav to
+
+function navToOrder(){
+  const p = _lastWinner;
+  const evtName = p ? (brandEvent(p.evtKey,'order_cta') || EV.ORDER_CTA_REPEAT) : EV.ORDER_CTA_REPEAT;
+  logEvent(evtName, { prize_id:p?.id, seller:p?.seller, source:'win_screen' });
+  if(!p || !p.seller){ console.warn('navToOrder: no seller for this prize'); return; }
+  const msg = JSON.stringify({
+    type:'navigation',
+    nav:{ name:'OrderingModule', params:{ screen:'Products',
+      params:{ seller: p.seller, source: p.navSource }
+    }}
+  });
+  if(window.ReactNativeWebView) window.ReactNativeWebView.postMessage(msg);
+}
+function navToWallet(){
+  logEvent(EV.CASH_WALLET_CTA, { prize_id:_lastWinner?.id, seller:_lastWinner?.seller });
+  const msg = JSON.stringify({ type:'navigation', nav:{ name:'LoyaltyWallet', params:{} }});
+  if(window.ReactNativeWebView) window.ReactNativeWebView.postMessage(msg);
+}
+
+// ── CASHBACK / COUPON ──
+function creditCash(p){
+  if(!userId) return;
+  if(p.prob === 0){
+    logEvent(EV.CASH_SKIPPED, { prize_id:p.id, brand:p.evtKey, reason:'prob_zero_prize' });
+    return;
+  }
+  if(p.offerType === 'coupon'){
+    if(!p.couponId){
+      logEvent(EV.CASH_SKIPPED, { prize_id:p.id, brand:p.evtKey, reason:'coupon_id_missing' });
+      return;
+    }
+    fetch(COUPON_API, {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ data:{ user_id:userId, coupon_id:p.couponId, created_by:'AS', campaign:'gen_spin_wheel', validity:3 }})
+    })
+    .then(r=>r.json())
+    .then(()=>{ const ev=brandEvent(p.evtKey,'cash_ok'); if(ev) logEvent(ev,{prize_id:p.id,coupon_id:p.couponId}); })
+    .catch(err=>{ const ev=brandEvent(p.evtKey,'cash_fail'); if(ev) logEvent(ev,{prize_id:p.id,error:String(err)}); });
+    return;
+  }
+  if(p.offerType === 'cashback'){
+    if(p.cashAmt<=0 || p.sourceId===null || p.cashbackTypeId===null){
+      logEvent(EV.CASH_SKIPPED, { prize_id:p.id, brand:p.evtKey, reason:'cashback_config_missing' });
+      return;
+    }
+    fetch(CASHBACK_API, {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({ data:{ uid:userId, appVersion:'6.6.7', deviceId:'a1d4g6hh', reward:p.cashAmt, sourceId:p.sourceId, cashbackTypeId:p.cashbackTypeId, expireDays:3 }})
+    })
+    .then(r=>r.json())
+    .then(()=>{ const ev=brandEvent(p.evtKey,'cash_ok'); if(ev) logEvent(ev,{amount:p.cashAmt,prize_id:p.id,seller:p.seller}); })
+    .catch(err=>{ const ev=brandEvent(p.evtKey,'cash_fail'); if(ev) logEvent(ev,{prize_id:p.id,error:String(err)}); });
+  }
+}
+
+// ── REELS ──
+function buildReel(id){
+  const el=document.getElementById('r'+id);
+  el.innerHTML='';
+  const strip=[...REEL_STRIP,...REEL_STRIP,...REEL_STRIP,...REEL_STRIP,...REEL_STRIP];
+  strip.forEach(p=>{
+    const c=document.createElement('div');
+    c.className='cell'+(p.id===4?' gold-cell':p.cashAmt>=800?' hi':'');
+    // Gold coin or product image
+    if(p.id===4){
+      c.innerHTML=`<img src="${p.img}" class="reel-gcoin-img" alt=""><span class="cl">${p.val}</span>`;
+    } else if(p.img){
+      c.innerHTML=`<img src="${p.img}" class="reel-prod-img" alt=""><span class="cl">${p.val}</span>`;
+    } else {
+      c.innerHTML=`<span class="ci">${p.ico}</span><span class="cl">${p.val}</span>`;
+    }
+    el.appendChild(c);
+  });
+  el.style.transform='translateY(0)'; // start at 0; animation loop starts from 0 too
+}
+function initReels(){[0,1,2].forEach(i=>buildReel(i));}
+
+// ── PICK WINNER (only from prob>0) ──
+function pickWinner(){
+  const pool=PRIZES.filter(p=>p.prob>0);
+  const total=pool.reduce((s,p)=>s+p.prob,0);
+  let r=Math.random()*total,acc=0;
+  for(const p of pool){acc+=p.prob;if(r<=acc)return p;}
+  return pool[0];
+}
+
+// Find ALL positions of a prize in REEL_STRIP
+function allReelPositions(prizeId){
+  return REEL_STRIP.reduce((acc,p,i)=>{ if(p.id===prizeId) acc.push(i); return acc; },[]);
+}
+
+// ── SPIN ──
+document.getElementById('spinBtn').addEventListener('click',doSpin);
+
+function doSpin(){
+  const played=getPlayed();
+  if(played){showPlayedCard(played);return;}
+  if(spinning)return;
+  spinning=true;
+  document.getElementById('spinBtn').disabled=true;
+  const hint=document.getElementById('tapHint');
+  if(hint)hint.style.display='none';
+  clearWon();
+  logEvent(EV.SPIN_CLICKED, { time_on_page_ms: Date.now()-PAGE_LOAD_TIME });
+
+  const winner=pickWinner();
+  const slen=REEL_STRIP.length;
+
+  // Find all positions of winner in strip — assign a DIFFERENT one per reel
+  // so each reel shows different neighbours above/below
+  const positions=allReelPositions(winner.id);
+  // If fewer positions than reels, wrap around
+  const reelTargets=[0,1,2].map(i=>positions[i%positions.length]);
+
+  // Staggered starts — reel 0 first, then 1, then 2
+  const durs    = [3800, 4600, 5600];
+  const rounds  = [5, 6, 7];
+  [0,1,2].forEach((ri,i)=>{
+    setTimeout(()=>animateReel(ri,durs[i],reelTargets[i],slen,rounds[i],ri===2,winner), i*350);
+  });
+}
+
+function animateReel(ri,dur,winnerIdx,slen,rounds,isLast,winner){
+  const el=document.getElementById('r'+ri);
+
+  // snapIdx: translateY(-(snapIdx*CELL_H)) puts winnerIdx on the payline
+  // Payline is at pixel 88 (second visible cell).
+  // translateY(-n*CELL_H) → cell n is at top, cell n+1 is at payline.
+  // So snap to winnerIdx-1 to show winner on payline.
+  const snapIdx=((winnerIdx-1)%slen+slen)%slen;
+
+  // Total distance to travel: full loops + land on snapIdx
+  const totalPx=(rounds*slen+snapIdx)*CELL_H;
+
+  // Realistic easing: instant fast, hold at speed, clicky step-deceleration
+  function eased(t){
+    if(t<0.05){
+      // Snap to full speed instantly (real machines don't ramp up slowly)
+      return t/0.05*0.12;
+    }
+    if(t<0.70){
+      // Constant fast spin
+      return 0.12+(t-0.05)/0.65*0.72;
+    }
+    // Slow-down phase: stepped deceleration — each "step" mimics a cell click
+    const s=(t-0.70)/0.30;
+    const smooth=1-Math.pow(1-s,2.5);
+    // Add subtle step oscillation to simulate mechanical clicks
+    const cellFraction=(eased_noStep(t)*totalPx/CELL_H)%1;
+    const stepWobble=cellFraction<0.5?0:0.001*Math.sin(cellFraction*Math.PI*8);
+    return 0.84+smooth*0.16+stepWobble;
+  }
+
+  // Version without wobble for internal use
+  function eased_noStep(t){
+    if(t<0.05) return t/0.05*0.12;
+    if(t<0.70) return 0.12+(t-0.05)/0.65*0.72;
+    const s=(t-0.70)/0.30;
+    return 0.84+(1-Math.pow(1-s,2.5))*0.16;
+  }
+
+  let start=null;
+  function frame(ts){
+    if(!start)start=ts;
+    const t=Math.min((ts-start)/dur,1);
+    const dist=eased(t)*totalPx;
+    // Loop modulo so reel wraps continuously
+    const y=-((dist)%(slen*CELL_H));
+    el.style.transform=`translateY(${y}px)`;
+    if(t<1){
+      requestAnimationFrame(frame);
+    } else {
+      // Hard snap to exact position
+      el.style.transform=`translateY(${-(snapIdx*CELL_H)}px)`;
+      if(isLast)onDone(winner);
+    }
+  }
+  requestAnimationFrame(frame);
+}
+
+function onDone(winner){
+  spinning=false;
+  _lastWinner=winner;
+  const now=Date.now();
+  savePlayed(winner,now);
+  highlightChip(winner.id);
+  creditCash(winner);
+  launchConfetti();
+  const winEv = brandEvent(winner.evtKey,'win') || EV.SPIN_CLICKED;
+  logEvent(winEv, { prize_id:winner.id, prize_val:winner.val, brand:winner.evtKey, time_ms:now-PAGE_LOAD_TIME });
+  setTimeout(()=>showModal(winner,now+OFFER_TTL_MS),700);
+}
+
+function getUsageExamples(p){
+  const pct = 5;
+  const orders = [1000, 2000, 5000];
+  if(p.offerType === 'coupon'){
+    return orders.map(o => `₹${o.toLocaleString('hi')} के ऑर्डर पर ${pct}% = ₹${Math.round(o*pct/100)} की बचत`);
+  }
+  if(p.offerType === 'cashback' && p.cashAmt > 0){
+    const lines = orders.map(o => `₹${o.toLocaleString('hi')} के ऑर्डर पर ${pct}% = ₹${Math.min(Math.round(o*pct/100),p.cashAmt)} कैश मिलेगा`);
+    lines.push(`__disclaimer__यह कैश ${p.name} के कई ऑर्डर पर उपयोग किया जा सकता है`);
+    return lines;
+  }
+  return [];
+}
+
+function getTickerText(p){
+  const brand = p.name;
+  const txt = p.offerType === 'coupon'
+    ? `🛒 यह छूट सिर्फ ${brand} के ऑर्डर पर मिलेगी`
+    : `🛒 यह कैश सिर्फ ${brand} के ऑर्डर पर मिलेगा`;
+  return `${txt} &nbsp;&nbsp;•&nbsp;&nbsp; ${txt} &nbsp;&nbsp;•&nbsp;&nbsp; ${txt} &nbsp;&nbsp;•&nbsp;&nbsp; ${txt} &nbsp;&nbsp;•&nbsp;&nbsp; `;
+}
+
+function showModal(p,expMs){
+  const icoEl=document.getElementById('mIco');
+  if(p.img){
+    icoEl.innerHTML=`<img src="${p.img}" style="width:72px;height:72px;object-fit:contain;border-radius:10px;" alt="">`;
+  } else {
+    icoEl.textContent=p.ico;
+  }
+  document.getElementById('mVal').textContent=p.val;
+  document.getElementById('mName').textContent=p.name;
+
+  // Usage examples — for coupon AND cashback offers
+  const exBox  = document.getElementById('mExamples');
+  const exList = document.getElementById('mExamplesList');
+  const ticker = document.getElementById('mTicker');
+  const tickerWrap = document.getElementById('mTickerWrap');
+  const hasExamples = p.offerType === 'coupon' || p.cashAmt > 0;
+  if(hasExamples){
+    const examples = getUsageExamples(p);
+    exList.innerHTML = examples.map(e => {
+      if(e.startsWith('__disclaimer__')){
+        return `<li style="list-style:none;margin-top:6px;font-size:10px;color:#4A7A5A;font-style:italic;padding-left:0">${e.replace('__disclaimer__','ℹ️ ')}</li>`;
+      }
+      return `<li>${e}</li>`;
+    }).join('');
+    exBox.style.display = 'block';
+    ticker.innerHTML = getTickerText(p);
+    tickerWrap.style.display = 'block';
+  } else {
+    exBox.style.display = 'none';
+    tickerWrap.style.display = 'none';
+  }
+
+  // Hide wallet CTA for coupon offers — coupons don't go to wallet
+  const cashBtn = document.getElementById('btnCash');
+  if(cashBtn) cashBtn.style.display = p.offerType === 'coupon' ? 'none' : '';
+
+  startCd('mCd',expMs);
+  document.getElementById('modalBg').classList.add('open');
+}
+
+function showPlayedCard(state){
+  document.getElementById('machineSection').style.display='none';
+  document.querySelector('.spin-outer').style.display='none';
+  const card=document.getElementById('playedCard');
+  card.style.display='block';
+
+  // Issue 3 fix: try prize_id first, fall back to evtKey, never silently show wrong prize
+  let p = PRIZES.find(x => x.id === state.prize_id);
+  if(!p && state.prize_evtKey) p = PRIZES.find(x => x.evtKey === state.prize_evtKey);
+  if(!p){
+    // State is corrupted — clear it and reload for a fresh spin
+    console.warn('showPlayedCard: could not resolve prize from state, clearing', state);
+    try{ localStorage.removeItem(PLAYED_KEY); }catch(e){}
+    location.reload();
+    return;
+  }
+
+  _lastWinner=p;
+  const prizeEl=document.getElementById('playedPrize');
+  if(p.img){
+    prizeEl.innerHTML=`<img src="${p.img}" style="width:52px;height:52px;object-fit:contain;border-radius:8px;vertical-align:middle;margin-right:6px;" alt=""> ${p.val}`;
+  } else {
+    prizeEl.textContent=p.ico+' '+p.val;
+  }
+  // Hide wallet CTA for coupon offers on played card
+  const cashBtnR = document.getElementById('btnCashR');
+  if(cashBtnR) cashBtnR.style.display = p.offerType === 'coupon' ? 'none' : '';
+
+  startCd('pCd',getExpiry(state));
+  logEvent(EV.SCREEN_ALREADY_PLAYED, { prize_id:p.id, brand:p.evtKey });
+}
+
+function highlightChip(id){
+  document.querySelectorAll('.chip').forEach(el=>el.classList.remove('won'));
+  const el=document.getElementById('pz-'+id);
+  if(el)el.classList.add('won');
+}
+function clearWon(){document.querySelectorAll('.chip').forEach(el=>el.classList.remove('won'));}
+
+// ── CONFETTI ──
+function launchConfetti(){
+  const wrap=document.getElementById('confetti');
+  wrap.innerHTML='';
+  const cols=['#0E7A3A','#F5C518','#16A34A','#D4920A','#fff','#22C55E','#FCD34D'];
+  function burst(n,delay){
+    setTimeout(()=>{
+      for(let i=0;i<n;i++){
+        const p=document.createElement('div');p.className='cp';
+        const sz=6+Math.random()*9;
+        p.style.cssText=`left:${Math.random()*100}vw;width:${sz}px;height:${sz}px;background:${cols[Math.floor(Math.random()*cols.length)]};border-radius:${Math.random()>.5?'50%':'2px'};animation-duration:${1.4+Math.random()*1.8}s;animation-delay:${Math.random()*.4}s`;
+        wrap.appendChild(p);
+      }
+    },delay);
+  }
+  burst(70,0);burst(50,420);
+  setTimeout(()=>wrap.innerHTML='',5000);
+}
+
+// ── WIRE UP BUTTONS ──
+document.getElementById('btnOrder').addEventListener('click',()=>{document.getElementById('modalBg').classList.remove('open');navToOrder();});
+document.getElementById('btnCash').addEventListener('click', ()=>{document.getElementById('modalBg').classList.remove('open');navToWallet();});
+document.getElementById('btnOrderR').addEventListener('click',navToOrder);
+document.getElementById('btnCashR').addEventListener('click', ()=>{
+  logEvent(EV.CASH_CTA_REPEAT, { prize_id:_lastWinner?.id, brand:_lastWinner?.evtKey });
+  const msg = JSON.stringify({ type:'navigation', nav:{ name:'LoyaltyWallet', params:{} }});
+  if(window.ReactNativeWebView) window.ReactNativeWebView.postMessage(msg);
+});
+
+// ── INIT ──
+initReels();
+logEvent(EV.SCREEN_VIEW, { referrer: document.referrer||null });
+
+// ── Check played state on load AND on every WebView resume ──
+// React Native WebView resumes the existing session on back-nav — page doesn't reload.
+// visibilitychange + pageshow catch both cases.
+function checkPlayedOnResume(){
+  const existing = getPlayed();
+  if(!existing) return;
+  if(getExpiry(existing) <= Date.now()){
+    try{ localStorage.removeItem(PLAYED_KEY); }catch(e){}
+    return; // expired — let them spin fresh
+  }
+  // Already played and still valid — always show played card
+  const ms = document.getElementById('machineSection');
+  const so = document.querySelector('.spin-outer');
+  if(ms && ms.style.display !== 'none'){
+    // Machine is showing — switch to played card
+    showPlayedCard(existing);
+  }
+}
+
+// Initial check on page load
+const existing=getPlayed();
+if(existing){
+  if(getExpiry(existing)<=Date.now()){try{localStorage.removeItem(PLAYED_KEY);}catch(e){}}
+  else{ showPlayedCard(existing); }
+}
+
+// Re-check whenever user returns to this WebView (back navigation, app switch, etc.)
+document.addEventListener('visibilitychange', ()=>{
+  if(document.visibilityState === 'visible') checkPlayedOnResume();
+});
+window.addEventListener('pageshow', (e)=>{
+  // e.persisted = true means page came from bfcache (back navigation)
+  checkPlayedOnResume();
+});
+</script>
+</body>
+</html>
